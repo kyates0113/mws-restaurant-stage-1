@@ -15,18 +15,21 @@
 }
 
 /*ipad*/
-@media screen and (min-width: 554px) and (max-width: 1300px) {
+@media screen and (min-width: 633px) and (max-width: 1300px) {
 	body{
 	
 	}
 	li{
 		width: 45%;
 	}
+	#restaurants-list{
+		padding: 20px;
+	}
 }
 
 
 /*iphone6*/
-@media screen and (max-width: 553px) {
+@media screen and (max-width: 632px) {
 	.filter-options{
 	align-items: flex-start;
   	display: flex;
@@ -38,6 +41,9 @@
 	}
 	.filter-options select{
 		align-self: center;
+	}
+	#restaurants-list {
+		padding: 30px;
 	}
 }
 
