@@ -1,6 +1,6 @@
 
 /*desktop app*/
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1301px) {
 	body{
 	max-width: 1400px;
 	margin-left: auto;
@@ -15,7 +15,7 @@
 }
 
 /*ipad*/
-@media screen and (min-width: 668px) and (max-width: 1399px) {
+@media screen and (min-width: 554px) and (max-width: 1300px) {
 	body{
 	
 	}
@@ -26,9 +26,18 @@
 
 
 /*iphone6*/
-@media screen and (max-width: 668px) {
-	body{
-	
+@media screen and (max-width: 553px) {
+	.filter-options{
+	align-items: flex-start;
+  	display: flex;
+  	flex-direction: column;	
+	}
+
+	.filter-options h2{
+		align-self: stretch;
+	}
+	.filter-options select{
+		align-self: center;
 	}
 }
 
