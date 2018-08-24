@@ -224,7 +224,11 @@ nav h1 a {
   .inside #restaurant-container {
     width: 50%;
     padding: 0px;
-
+  }
+  body {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
