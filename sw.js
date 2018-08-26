@@ -1,11 +1,5 @@
-//attempt#1
-self.addEventListener('install', function(event) {
-   event.waitUntil(
-    // TODO: open a cache named 'wittr-static-v1'
-    // Add cache the urls from urlsToCache
-    caches.open('main').then(function(cache) {
-      return cache.addAll(
-        [
+var cacheName = 'daCache';
+var urlsToCache = [
           '/',
           '/js/main.js',
           '/js/restaurant_info.js',
@@ -25,15 +19,19 @@ self.addEventListener('install', function(event) {
        '/img/9.jpg',
        '/img/10.jpg',
        '/data/restaurants.json'
-      ]
-      );
+      ];
+
+
+self.addEventListener('install', function(event) {
+   event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('opened cache');
+      return cache.addAll(urlsToCache);
       })
     );
 });
 
 self.addEventListener('fetch', function(event) {
-  // Leave this blank for now.
-  // We'll get to this in the next task.
   event.respondWith(
     caches.match(event.request).then(function(response) {
       if(response) return response;
