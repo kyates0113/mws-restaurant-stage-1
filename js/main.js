@@ -4,6 +4,33 @@ let restaurants,
 var newMap
 var markers = []
 
+
+// if (!navigator.serviceWorker) {return
+
+//   navigator.serviceWorker.register('/sw/sw.js').then(function () {
+//     console.log('Registration worked!');
+//   })['catch'](function () {
+//     console.log('Registration failed!');
+//   });
+// };
+
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('/sw.js').then(function(reg) {
+
+//     if(reg.installing) {
+//       console.log('Service worker installing');
+//     } else if(reg.waiting) {
+//       console.log('Service worker installed');
+//     } else if(reg.active) {
+//       console.log('Service worker active');
+//     }
+
+//   }).catch(function(error) {
+//     // registration failed
+//     console.log('Registration failed with ' + error);
+//   });
+// }
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
